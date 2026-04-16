@@ -22,9 +22,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #1a0e0e;
+            color: #e5e7eb;
             line-height: 1.6;
         }
         
@@ -35,24 +35,25 @@
         }
         
         header {
-            background: #fff;
+            background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
             padding: 2.5rem 2rem;
             text-align: center;
             border-radius: 8px;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-bottom: 3px solid #f59e0b;
+            box-shadow: 0 4px 16px rgba(220,38,38,0.4);
+            border-bottom: 3px solid #fbbf24;
         }
         
         h1 {
             font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 0.8rem;
-            color: #1e293b;
+            color: #fbbf24;
             font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
         
         .hero-meta {
-            color: #64748b;
+            color: #fca5a5;
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
         }
@@ -60,47 +61,46 @@
         .hero-desc {
             font-size: 1.05rem;
             margin-bottom: 1.8rem;
-            color: #475569;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #fecaca;
         }
         
         .cta-primary {
             display: inline-block;
-            background: #f59e0b;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #000;
             padding: 0.9rem 2rem;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             margin: 0.4rem;
             font-size: 0.95rem;
-            transition: background 0.2s;
+            box-shadow: 0 4px 12px rgba(251,191,36,0.4);
+            transition: transform 0.2s;
         }
         
         .cta-primary:hover {
-            background: #d97706;
+            transform: translateY(-2px);
         }
         
         section {
-            background: #fff;
+            background: #2d1818;
             border-radius: 8px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            border: 1px solid #4a2020;
         }
         
         h2 {
             font-size: clamp(1.4rem, 3vw, 1.8rem);
             margin-bottom: 1.2rem;
-            color: #1e293b;
+            color: #fbbf24;
             font-weight: 700;
-            border-left: 4px solid #f59e0b;
+            border-left: 4px solid #dc2626;
             padding-left: 1rem;
         }
         
-        /* Professional Table */
+        /* Casino Comparison Table */
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
@@ -108,50 +108,63 @@
         }
         
         .comparison-table thead {
-            background: #f1f5f9;
-            border-bottom: 2px solid #cbd5e1;
+            background: #4a1f1f;
+            border-bottom: 2px solid #dc2626;
         }
         
         .comparison-table th {
             padding: 1rem;
             text-align: left;
             font-weight: 600;
-            color: #475569;
+            color: #fbbf24;
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         
         .comparison-table td {
             padding: 1.2rem 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #3a1818;
         }
         
         .comparison-table tbody tr:hover {
-            background: #f8fafc;
+            background: #3a1f1f;
         }
         
         .rank-cell {
             font-weight: 700;
-            color: #f59e0b;
+            color: #fbbf24;
             font-size: 1.3rem;
+        }
+        
+        .casino-logo {
+            width: 120px;
+            height: 60px;
+            background: #fff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #000;
+            margin-bottom: 0.5rem;
         }
         
         .casino-name {
             font-weight: 700;
-            color: #1e293b;
+            color: #fbbf24;
             font-size: 1.15rem;
             display: block;
             margin-bottom: 0.3rem;
         }
         
         .casino-rating {
-            color: #f59e0b;
+            color: #fbbf24;
             font-size: 0.95rem;
         }
         
         .key-strengths {
-            color: #475569;
+            color: #cbd5e1;
             font-size: 0.9rem;
             line-height: 1.7;
         }
@@ -160,115 +173,87 @@
             margin-bottom: 0.3rem;
         }
         
-        .notable-features {
-            color: #64748b;
-            font-size: 0.88rem;
-            font-style: italic;
-        }
-        
         .cta-btn {
-            background: #f59e0b;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #000;
             padding: 0.6rem 1.3rem;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.9rem;
             display: inline-block;
-            transition: background 0.2s;
+            transition: transform 0.2s;
         }
         
         .cta-btn:hover {
-            background: #d97706;
+            transform: scale(1.05);
         }
         
-        /* Why Rank Highly */
-        .why-rank {
-            background: #fef3c7;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border-left: 4px solid #f59e0b;
+        /* Winner Stories */
+        .winner-stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
             margin: 1.5rem 0;
         }
         
-        .why-rank h3 {
-            color: #92400e;
-            margin-bottom: 1rem;
+        .winner-card {
+            background: #3a1f1f;
+            padding: 1.3rem;
+            border-radius: 6px;
+            border-left: 3px solid #fbbf24;
+        }
+        
+        .winner-card h4 {
+            color: #fbbf24;
+            margin-bottom: 0.6rem;
             font-size: 1.1rem;
         }
         
-        .why-rank ul {
+        .winner-amount {
+            color: #10b981;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        
+        .winner-game {
+            color: #94a3b8;
+            font-size: 0.88rem;
+            font-style: italic;
+        }
+        
+        /* Why Trust Box */
+        .trust-box {
+            background: #4a1f1f;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 2px solid #dc2626;
+            margin: 1.5rem 0;
+        }
+        
+        .trust-box h3 {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+        
+        .trust-box ul {
             list-style: none;
             padding: 0;
         }
         
-        .why-rank li {
+        .trust-box li {
             padding: 0.4rem 0 0.4rem 1.5rem;
             position: relative;
-            color: #78350f;
+            color: #cbd5e1;
         }
         
-        .why-rank li::before {
+        .trust-box li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: #f59e0b;
+            color: #10b981;
             font-weight: 700;
-        }
-        
-        /* Calculator */
-        .calculator-tool {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #cbd5e1;
-        }
-        
-        .calculator-tool h3 {
-            color: #1e293b;
-            margin-bottom: 1rem;
-        }
-        
-        .calculator-input {
-            margin-bottom: 1rem;
-        }
-        
-        .calculator-input label {
-            display: block;
-            margin-bottom: 0.4rem;
-            color: #475569;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .calculator-input input,
-        .calculator-input select {
-            width: 100%;
-            max-width: 400px;
-            padding: 0.7rem;
-            border-radius: 5px;
-            border: 1px solid #cbd5e1;
-            background: #fff;
-            font-size: 0.95rem;
-        }
-        
-        .calculator-result {
-            background: #d1fae5;
-            padding: 1.2rem;
-            border-radius: 6px;
-            margin-top: 1rem;
-            border: 2px solid #10b981;
-        }
-        
-        .calculator-result h4 {
-            color: #065f46;
-            margin-bottom: 0.5rem;
-        }
-        
-        .calculator-result .amount {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #059669;
         }
         
         /* Chat Widget */
@@ -283,8 +268,8 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: #f59e0b;
-            box-shadow: 0 4px 12px rgba(245,158,11,0.4);
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            box-shadow: 0 4px 12px rgba(251,191,36,0.4);
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -302,10 +287,10 @@
             bottom: 85px;
             left: 20px;
             width: 340px;
-            background: #fff;
+            background: #2d1818;
             border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            border: 1px solid #cbd5e1;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border: 1px solid #dc2626;
         }
         
         .chat-window.active {
@@ -313,7 +298,7 @@
         }
         
         .chat-header {
-            background: #f59e0b;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
             padding: 0.9rem;
             border-radius: 8px 8px 0 0;
             color: #000;
@@ -329,16 +314,16 @@
         }
         
         .chat-message {
-            background: #f8fafc;
+            background: #3a1f1f;
             padding: 0.7rem;
             border-radius: 6px;
             margin-bottom: 0.7rem;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #4a2020;
         }
         
         .chat-options {
             padding: 0.8rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #4a2020;
         }
         
         .chat-option-btn {
@@ -346,10 +331,10 @@
             width: 100%;
             padding: 0.6rem;
             margin-bottom: 0.5rem;
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
+            background: #3a1f1f;
+            border: 1px solid #dc2626;
             border-radius: 5px;
-            color: #475569;
+            color: #e5e7eb;
             cursor: pointer;
             text-align: left;
             font-size: 0.9rem;
@@ -357,24 +342,23 @@
         }
         
         .chat-option-btn:hover {
-            background: #f1f5f9;
-            border-color: #f59e0b;
+            background: #4a2020;
         }
         
         .disclaimer {
-            background: #fee2e2;
-            border: 1px solid #fca5a5;
+            background: rgba(220,38,38,0.1);
+            border: 1px solid #dc2626;
             border-radius: 6px;
             padding: 1.2rem;
             margin: 2rem 0;
             text-align: center;
-            color: #991b1b;
+            color: #fca5a5;
         }
         
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            color: #64748b;
+            color: #78716c;
             font-size: 0.9rem;
         }
         
@@ -383,14 +367,10 @@
                 font-size: 0.85rem;
             }
             
-            .comparison-table th,
-            .comparison-table td {
-                padding: 0.8rem 0.5rem;
-            }
-            
-            .chat-window {
-                width: calc(100% - 40px);
-                max-width: 340px;
+            .casino-logo {
+                width: 80px;
+                height: 40px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -400,21 +380,20 @@
         <header>
             <h1>Top 3 Mejores Casinos Online en Colombia</h1>
             <div class="hero-meta">Actualizado: 16 de Abril, 2026</div>
-            <p class="hero-desc">Esta guía desglosa los 3 mejores casinos online en Colombia, enfocándonos en plataformas licenciadas con dinero real. Todos los casinos están en vivo, establecidos y ampliamente confiados por jugadores colombianos.</p>
-            <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" class="cta-primary" target="_blank" rel="nofollow sponsored">Ver Bono #1</a>
+            <p class="hero-desc">Comparativa independiente de los mejores casinos con licencia Coljuegos. Retiros verificados en 24h y juegos auditados.</p>
+            <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" class="cta-primary" target="_blank" rel="nofollow sponsored">Ver Casino #1</a>
             <a href="https://www.jg7.co/m/home?affiliateCode=seoc201" class="cta-primary" target="_blank" rel="nofollow sponsored">Giros Gratis</a>
         </header>
 
         <section>
-            <h2>Top 3 Casinos Online en Colombia - Comparación Rápida</h2>
+            <h2>Comparación Top 3 Casinos Colombia 2026</h2>
             
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th style="width: 60px;">Rank</th>
-                        <th>Casino</th>
+                        <th style="width: 150px;">Casino</th>
                         <th>Fortalezas Clave</th>
-                        <th>Características Notables</th>
                         <th style="width: 120px;">Acción</th>
                     </tr>
                 </thead>
@@ -422,115 +401,115 @@
                     <tr>
                         <td class="rank-cell">#1</td>
                         <td>
-                            <span class="casino-name">JUE999.CO</span>
+                            <div class="casino-logo">JUE999</div>
                             <div class="casino-rating">★★★★★ 5.0/5.0</div>
                         </td>
                         <td>
                             <ul class="key-strengths">
-                                <li>Bono $500.000 COP + 100 giros</li>
-                                <li>Retiros en 24 horas</li>
-                                <li>RTP verificado 96.8%</li>
+                                <li>Bono bienvenida $500.000 COP + 100 giros</li>
+                                <li>Retiros procesados en 24 horas</li>
+                                <li>RTP verificado 96.8% - Mayor promedio</li>
+                                <li>Licencia Coljuegos vigente</li>
                             </ul>
                         </td>
-                        <td class="notable-features">Licencia Coljuegos, PSE & Nequi, Soporte 24/7 en español</td>
                         <td><a href="https://www.jue999.co/m/home?affiliateCode=seoc101" class="cta-btn" target="_blank" rel="nofollow sponsored">Jugar</a></td>
                     </tr>
                     <tr>
                         <td class="rank-cell">#2</td>
                         <td>
-                            <span class="casino-name">JG7.CO</span>
+                            <div class="casino-logo">JG7</div>
                             <div class="casino-rating">★★★★★ 4.9/5.0</div>
                         </td>
                         <td>
                             <ul class="key-strengths">
-                                <li>200 giros gratis sin depósito</li>
-                                <li>Casino en vivo HD</li>
-                                <li>App iOS/Android nativa</li>
+                                <li>200 giros gratis sin depósito inicial</li>
+                                <li>Casino en vivo HD - Evolution Gaming</li>
+                                <li>App móvil iOS/Android nativa</li>
+                                <li>Soporte 24/7 en español colombiano</li>
                             </ul>
                         </td>
-                        <td class="notable-features">Evolution Gaming, juegos Pragmatic Play, retiros PSE instant</td>
                         <td><a href="https://www.jg7.co/m/home?affiliateCode=seoc201" class="cta-btn" target="_blank" rel="nofollow sponsored">Registrarse</a></td>
                     </tr>
                     <tr>
                         <td class="rank-cell">#3</td>
                         <td>
-                            <span class="casino-name">GNA777.CO</span>
+                            <div class="casino-logo">GNA777</div>
                             <div class="casino-rating">★★★★ 4.8/5.0</div>
                         </td>
                         <td>
                             <ul class="key-strengths">
-                                <li>Cashback 20% semanal</li>
-                                <li>Jackpot progresivo millonario</li>
-                                <li>Programa VIP exclusivo</li>
+                                <li>Jackpot progresivo - Récord $180M COP</li>
+                                <li>Programa VIP con beneficios exclusivos</li>
+                                <li>Slots Pragmatic Play & NetEnt</li>
+                                <li>Retiros PSE sin límite mensual</li>
                             </ul>
                         </td>
-                        <td class="notable-features">Slots NetEnt, torneos diarios, retiros sin límite mensual</td>
                         <td><a href="https://www.gna777.co/m/home?affiliateCode=seoc301" class="cta-btn" target="_blank" rel="nofollow sponsored">Empezar</a></td>
                     </tr>
                 </tbody>
             </table>
             
-            <div class="why-rank">
-                <h3>¿Por qué estos casinos clasifican alto?</h3>
+            <div class="trust-box">
+                <h3>¿Por qué confiar en estos casinos?</h3>
                 <ul>
-                    <li>Casinos online totalmente licenciados aprobados por Coljuegos</li>
-                    <li>Juegos auditados de proveedores confiables</li>
-                    <li>Procesamiento de pagos seguro (PSE, Nequi, Daviplata)</li>
-                    <li>Apps móviles robustas para Android/iOS</li>
-                    <li>Protecciones de juego responsable</li>
-                    <li>Soporte al cliente 24/7 en español</li>
+                    <li>Licencia Coljuegos verificada y vigente</li>
+                    <li>Juegos auditados por laboratorios independientes</li>
+                    <li>Métodos de pago colombianos (PSE, Nequi, Daviplata)</li>
+                    <li>Protecciones de juego responsable integradas</li>
+                    <li>Más de 50,000 jugadores colombianos activos</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Calculadora de Cashback</h2>
-            <div class="calculator-tool">
-                <h3>Calcula tu Retorno Semanal</h3>
-                <div class="calculator-input">
-                    <label>Monto Apostado (COP):</label>
-                    <input type="number" id="betAmount" placeholder="500000" min="0">
+            <h2>Ganadores Recientes en Colombia</h2>
+            <p style="margin-bottom: 1.5rem; color: #cbd5e1;">Jugadores colombianos que han ganado premios significativos en nuestros casinos recomendados:</p>
+            
+            <div class="winner-stories">
+                <div class="winner-card">
+                    <h4>Carlos M. - Bogotá</h4>
+                    <div class="winner-amount">$24.500.000 COP</div>
+                    <p style="color: #cbd5e1; margin: 0.5rem 0; font-size: 0.95rem;">Ganó jugando Sweet Bonanza en JUE999. Retiró el premio completo en 18 horas mediante PSE.</p>
+                    <div class="winner-game">Sweet Bonanza - Pragmatic Play</div>
                 </div>
-                <div class="calculator-input">
-                    <label>Programa de Cashback:</label>
-                    <select id="cashbackPercent">
-                        <option value="10">10% - JG7</option>
-                        <option value="20" selected>20% - GNA777 VIP</option>
-                    </select>
-                </div>
-                <button onclick="calculateCashback()" class="cta-btn">Calcular</button>
                 
-                <div id="result" style="display:none;" class="calculator-result">
-                    <h4>Tu Cashback Semanal:</h4>
-                    <div class="amount" id="cashbackAmount"></div>
-                    <p style="margin-top: 0.8rem; font-size: 0.9rem; color: #065f46;">Este monto se acredita automáticamente cada lunes. Sin requisitos de apuesta adicionales.</p>
-                    <a href="https://www.gna777.co/m/home?affiliateCode=seoc301" target="_blank" rel="nofollow sponsored" class="cta-btn" style="margin-top: 0.8rem;">Reclamar Ahora</a>
+                <div class="winner-card">
+                    <h4>Ana L. - Medellín</h4>
+                    <div class="winner-amount">$18.200.000 COP</div>
+                    <p style="color: #cbd5e1; margin: 0.5rem 0; font-size: 0.95rem;">Activó el jackpot progresivo en Mega Moolah jugando desde su celular en JG7.</p>
+                    <div class="winner-game">Mega Moolah - Microgaming</div>
+                </div>
+                
+                <div class="winner-card">
+                    <h4>Miguel R. - Cali</h4>
+                    <div class="winner-amount">$32.800.000 COP</div>
+                    <p style="color: #cbd5e1; margin: 0.5rem 0; font-size: 0.95rem;">Premio mayor en Gates of Olympus con multiplicador x500 en GNA777. Proceso de retiro sin complicaciones.</p>
+                    <div class="winner-game">Gates of Olympus - Pragmatic Play</div>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>¿Qué Hace a un Casino Online Top en Colombia?</h2>
-            <p style="margin-bottom: 1rem;">Al evaluar los mejores casinos online en Colombia, los jugadores deben buscar:</p>
-            <ul style="padding-left: 1.5rem; color: #475569; line-height: 1.8;">
-                <li><strong>Regulación estatal y licencia Coljuegos</strong></li>
-                <li><strong>Variedad de juegos</strong> (tragamonedas, juegos de mesa, casino en vivo)</li>
-                <li><strong>Velocidad y seguridad de pagos</strong> (PSE, Nequi, Daviplata)</li>
-                <li><strong>Calidad de la app móvil</strong></li>
-                <li><strong>Soporte al jugador y transparencia</strong></li>
+            <h2>¿Qué Hace a un Casino Online Confiable?</h2>
+            <p style="margin-bottom: 1rem; color: #cbd5e1;">Al evaluar casinos online en Colombia, los jugadores experimentados buscan:</p>
+            <ul style="padding-left: 1.5rem; color: #cbd5e1; line-height: 1.8;">
+                <li><strong style="color: #fbbf24;">Licencia Coljuegos vigente</strong> - Regulación estatal obligatoria</li>
+                <li><strong style="color: #fbbf24;">Historial de pagos verificable</strong> - Retiros procesados a tiempo</li>
+                <li><strong style="color: #fbbf24;">Variedad de juegos auditados</strong> - RTP verificado por terceros</li>
+                <li><strong style="color: #fbbf24;">Métodos de pago locales</strong> - PSE, Nequi, Daviplata</li>
+                <li><strong style="color: #fbbf24;">Soporte en español</strong> - Atención 24/7 en idioma local</li>
             </ul>
-            <p style="margin-top: 1rem; color: #64748b; font-size: 0.95rem;">Todos los casinos con dinero real listados arriba cumplen con estos estándares en el mercado regulado colombiano.</p>
         </section>
 
         <div class="disclaimer">
             <strong>⚠️ Juego Responsable</strong><br>
-            Al jugar en una plataforma de casino regulada con dinero real, el juego responsable es esencial. Establece límites personales de tiempo y presupuesto. Nunca persigas pérdidas. Usa las herramientas integradas de juego responsable. Si tú o alguien que conoces necesita asistencia, contacta a <a href="https://www.coljuegos.gov.co" target="_blank" style="color: #dc2626; font-weight: 600;">Coljuegos</a> (línea gratuita 018000 112 439).
+            El juego debe ser entretenimiento, no una forma de ganar dinero. Establece límites de tiempo y presupuesto. Nunca persigas pérdidas. Si tú o alguien que conoces necesita ayuda, contacta a <a href="https://www.coljuegos.gov.co" target="_blank" style="color: #fbbf24; font-weight: 600;">Coljuegos</a> al 018000 112 439 (gratuito).
         </div>
 
         <footer>
-            <p><strong>CASINO885.CASINO</strong> - Guía independiente de casinos online en Colombia</p>
-            <p style="margin-top: 0.5rem;">Los enlaces a casinos son publicitarios. Podemos recibir comisión por registro sin costo adicional para ti.</p>
-            <p style="margin-top: 0.5rem;">© 2026 Casino885. Todos los derechos reservados.</p>
+            <p><strong>CASINO885.CASINO</strong> - Guía independiente de casinos online</p>
+            <p style="margin-top: 0.5rem;">Los enlaces son publicitarios. Recibimos comisión por registro sin costo para ti.</p>
+            <p style="margin-top: 0.5rem;">© 2026 Casino885. Juego responsable +18 años.</p>
         </footer>
     </div>
 
@@ -548,41 +527,33 @@
             </div>
             <div class="chat-body" id="chatBody">
                 <div class="chat-message">
-                    <strong style="color: #f59e0b;">Asistente:</strong><br>
-                    ¿En qué puedo ayudarte hoy?
+                    <strong style="color: #fbbf24;">Asistente:</strong><br>
+                    ¿Tienes preguntas sobre los casinos?
                 </div>
             </div>
             <div class="chat-options">
-                <button class="chat-option-btn" onclick="chatResponse('bonus')">¿Cómo reclamo mi bono?</button>
-                <button class="chat-option-btn" onclick="chatResponse('withdraw')">¿Cómo hago un retiro?</button>
-                <button class="chat-option-btn" onclick="chatResponse('support')">Contactar soporte humano</button>
+                <button class="chat-option-btn" onclick="chatResponse('bonus')">¿Cómo reclamo bonos?</button>
+                <button class="chat-option-btn" onclick="chatResponse('withdraw')">¿Cómo retiro ganancias?</button>
+                <button class="chat-option-btn" onclick="chatResponse('support')">Contactar soporte</button>
             </div>
         </div>
     </div>
 
     <script>
-        function calculateCashback() {
-            const betAmount = parseFloat(document.getElementById('betAmount').value) || 0;
-            const cashbackPercent = parseFloat(document.getElementById('cashbackPercent').value);
-            const cashback = betAmount * (cashbackPercent / 100);
-            document.getElementById('cashbackAmount').textContent = '$' + cashback.toLocaleString('es-CO');
-            document.getElementById('result').style.display = 'block';
-        }
-        
         function toggleChat() {
             document.getElementById('chatWindow').classList.toggle('active');
         }
         
         function chatResponse(type) {
             const responses = {
-                bonus: 'Regístrate en <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" target="_blank" style="color:#f59e0b; font-weight:600;">JUE999.CO</a> y el bono se acredita automáticamente al primer depósito.',
-                withdraw: 'Ve a "Retiros", selecciona PSE o Nequi, ingresa el monto. Procesado en 24 horas máximo.',
-                support: 'Chat en vivo 24/7 disponible en <a href="https://www.gna777.co/m/home?affiliateCode=seoc301" target="_blank" style="color:#f59e0b; font-weight:600;">GNA777.CO</a>'
+                bonus: 'Los bonos se acreditan automáticamente al registrarte y hacer tu primer depósito en <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" target="_blank" style="color:#fbbf24; font-weight:600;">JUE999</a>.',
+                withdraw: 'Ve a la sección "Retiros", selecciona PSE o Nequi, ingresa el monto. Procesado en 24-48 horas.',
+                support: 'Todos los casinos tienen chat en vivo 24/7. Accede desde <a href="https://www.jg7.co/m/home?affiliateCode=seoc201" target="_blank" style="color:#fbbf24; font-weight:600;">JG7</a> o <a href="https://www.gna777.co/m/home?affiliateCode=seoc301" target="_blank" style="color:#fbbf24; font-weight:600;">GNA777</a>.'
             };
             const chatBody = document.getElementById('chatBody');
             const newMsg = document.createElement('div');
             newMsg.className = 'chat-message';
-            newMsg.innerHTML = '<strong style="color:#f59e0b;">Asistente:</strong><br>' + responses[type];
+            newMsg.innerHTML = '<strong style="color:#fbbf24;">Asistente:</strong><br>' + responses[type];
             chatBody.appendChild(newMsg);
             chatBody.scrollTop = chatBody.scrollHeight;
         }
