@@ -595,6 +595,39 @@
             <p style="margin-top: 0.5rem;">Los enlaces a casinos son publicitarios. Recibimos comisión por registro sin costo adicional para ti. Todos los casinos recomendados están licenciados por Coljuegos.</p>
             <p style="margin-top: 0.5rem;">© 2026 Casino885. Todos los derechos reservados. Juego responsable +18 años.</p>
         </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-button" onclick="toggleChat()" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#dc2626,#991b1b);box-shadow:0 4px 12px rgba(220,38,38,0.4);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#fff">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+        </div>
+        <div class="chat-window" id="chatWindow" style="display:none;position:fixed;bottom:85px;left:20px;width:350px;max-height:500px;background:#2d1818;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.5);border:1px solid #dc2626;z-index:9998;">
+            <div class="chat-header" style="background:linear-gradient(135deg,#dc2626,#991b1b);padding:0.9rem;border-radius:8px 8px 0 0;color:#fff;font-weight:600;display:flex;justify-content:space-between;">
+                <span>💬 Asistente Casino885</span>
+                <span onclick="toggleChat()" style="cursor:pointer;font-size:1.5rem;line-height:1;">×</span>
+            </div>
+            <div class="chat-body" id="chatBody" style="padding:1rem;max-height:280px;overflow-y:auto;">
+                <div class="chat-message" style="background:#3a1f1f;padding:0.7rem;border-radius:6px;margin-bottom:0.7rem;border:1px solid #4a2020;">
+                    <strong style="color:#fbbf24;">Asistente:</strong><br>
+                    <span style="color:#cbd5e1;">¡Hola! ¿Tienes preguntas sobre los casinos recomendados?</span>
+                </div>
+            </div>
+            <div class="chat-options" style="padding:0.8rem;border-top:1px solid #4a2020;">
+                <button class="chat-option-btn" onclick="chatResponse('bonus')" style="display:block;width:100%;padding:0.6rem;margin-bottom:0.5rem;background:#3a1f1f;border:1px solid #dc2626;border-radius:5px;color:#e5e7eb;cursor:pointer;text-align:left;font-size:0.9rem;transition:background 0.2s;">¿Cómo reclamo bonos?</button>
+                <button class="chat-option-btn" onclick="chatResponse('withdraw')" style="display:block;width:100%;padding:0.6rem;margin-bottom:0.5rem;background:#3a1f1f;border:1px solid #dc2626;border-radius:5px;color:#e5e7eb;cursor:pointer;text-align:left;font-size:0.9rem;transition:background 0.2s;">¿Cómo retiro ganancias?</button>
+                <button class="chat-option-btn" onclick="chatResponse('support')" style="display:block;width:100%;padding:0.6rem;background:#3a1f1f;border:1px solid #dc2626;border-radius:5px;color:#e5e7eb;cursor:pointer;text-align:left;font-size:0.9rem;transition:background 0.2s;">Contactar soporte</button>
+                <button class="chat-option-btn" onclick="chatResponse('betsson')" style="display:block;width:100%;padding:0.6rem;margin-top:0.5rem;background:#3a1f1f;border:1px solid #fbbf24;border-radius:5px;color:#e5e7eb;cursor:pointer;text-align:left;font-size:0.9rem;transition:background 0.2s;">¿JUE999 vs Betsson?</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .chat-widget { position:fixed; bottom:20px; left:20px; z-index:9999; }
+        .chat-button:hover { transform:scale(1.1); }
+        .chat-window.active { display:block !important; }
+        .chat-option-btn:hover { background:#4a2020; }
+    </style>
     </div>
 
     <script type="application/ld+json">
@@ -631,6 +664,31 @@
                 q.parentElement.classList.toggle('active');
             });
         });
+    </script>
+    <script>
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+                chatWindow.style.display = 'block';
+            } else {
+                chatWindow.style.display = 'none';
+            }
+        }
+        function chatResponse(type) {
+            const responses = {
+                bonus: 'Los bonos se acreditan automáticamente al registrarte y hacer tu primer depósito en <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-weight:600;">JUE999</a>. Requisitos: rollover x35, 30 días validez.',
+                withdraw: 'Ve a la sección "Retiros", selecciona PSE o Nequi, ingresa el monto. Procesado en 24-48 horas. Primer retiro requiere verificar cédula.',
+                support: 'Todos los casinos tienen chat en vivo 24/7. <a href="https://www.jg7.co/m/home?affiliateCode=seoc201" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-weight:600;">JG7</a> y <a href="https://www.gna777.co/m/home?affiliateCode=seoc301" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-weight:600;">GNA777</a> responden en menos de 2 minutos.',
+                betsson: '<strong style="color:#fbbf24;">JUE999 vs Betsson:</strong><br>• Retiros: JUE999 (24h) vs Betsson (5-7 días)<br>• RTP: JUE999 (96.8%) vs Betsson (95.2%)<br>• Bono: JUE999 ($500K x35) vs Betsson ($300K x45)<br><a href="https://www.jue999.co/m/home?affiliateCode=seoc101" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-weight:600;">Prueba JUE999 aquí</a>'
+            };
+            const chatBody = document.getElementById('chatBody');
+            const newMsg = document.createElement('div');
+            newMsg.className = 'chat-message';
+            newMsg.style.cssText = 'background:#3a1f1f;padding:0.7rem;border-radius:6px;margin-bottom:0.7rem;border:1px solid #4a2020;';
+            newMsg.innerHTML = '<strong style="color:#fbbf24;">Asistente:</strong><br><span style="color:#cbd5e1;">' + responses[type] + '</span>';
+            chatBody.appendChild(newMsg);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
     </script>
 </body>
 </html>
