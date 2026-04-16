@@ -261,6 +261,33 @@
             .step-item { padding-left: 3.5rem; }
             .step-item::before { width: 2rem; height: 2rem; font-size: 1rem; }
         }
+    
+        /* 大獎榜手機版優化 */
+        @media (max-width: 768px) {
+            .winners-section h3 {
+                font-size: 1.3rem !important;
+                line-height: 1.4 !important;
+            }
+            .winners-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.8rem !important;
+            }
+            .winner-card {
+                padding: 0.8rem !important;
+            }
+            .winner-amount {
+                font-size: 1.5rem !important;
+            }
+            .winner-game {
+                font-size: 0.85rem !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .winners-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    
     </style>
 </head>
 <body>
@@ -275,52 +302,52 @@
         </header>
 
         <!-- Grandes Ganadores Section -->
-        <section style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); 
+        <section class="winners-section" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); 
                        padding: 2rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; 
                        text-align: center; color: #000; box-shadow: 0 4px 16px rgba(251,191,36,0.3);">
             <h3 style="margin-bottom: 1.2rem; font-size: 1.5rem; font-weight: 700;">
                 🏆 Grandes Ganadores en Colombia Esta Semana
             </h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            <div class="winners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
                         gap: 1.2rem; max-width: 900px; margin: 0 auto;">
-                <div style="background: rgba(0,0,0,0.1); padding: 1.2rem; border-radius: 6px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem;">$25.000.000</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">
+                <div class="winner-card" style="background: rgba(0,0,0,0.25); padding: 1.2rem; border-radius: 6px; backdrop-filter: blur(10px);">
+                    <div class="winner-amount" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.4rem; color: #000; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">$25.000.000</div>
+                    <div class="winner-game" style="font-size: 1rem; opacity: 1; font-weight: 700; color: #1a1a1a;">
                         Sweet Bonanza
                     </div>
-                    <div style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.2rem;">
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.3rem; color: #2d2d2d; font-weight: 600;">
                         📍 Bogotá
                     </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.1); padding: 1.2rem; border-radius: 6px;">
-                    <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem;">$18.500.000</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">
+                <div class="winner-card" style="background: rgba(0,0,0,0.25); padding: 1.2rem; border-radius: 6px;">
+                    <div class="winner-amount" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.4rem; color: #000; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">$18.500.000</div>
+                    <div class="winner-game" style="font-size: 1rem; opacity: 1; font-weight: 700; color: #1a1a1a;">
                         Gates of Olympus
                     </div>
-                    <div style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.2rem;">
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.3rem; color: #2d2d2d; font-weight: 600;">
                         📍 Medellín
                     </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.1); padding: 1.2rem; border-radius: 6px;">
-                    <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem;">$12.800.000</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">
+                <div class="winner-card" style="background: rgba(0,0,0,0.25); padding: 1.2rem; border-radius: 6px;">
+                    <div class="winner-amount" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.4rem; color: #000; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">$12.800.000</div>
+                    <div class="winner-game" style="font-size: 1rem; opacity: 1; font-weight: 700; color: #1a1a1a;">
                         Mega Moolah
                     </div>
-                    <div style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.2rem;">
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.3rem; color: #2d2d2d; font-weight: 600;">
                         📍 Cali
                     </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.1); padding: 1.2rem; border-radius: 6px;">
-                    <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem;">$9.600.000</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">
+                <div class="winner-card" style="background: rgba(0,0,0,0.25); padding: 1.2rem; border-radius: 6px;">
+                    <div class="winner-amount" style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.4rem; color: #000; text-shadow: 1px 1px 2px rgba(255,255,255,0.3);">$9.600.000</div>
+                    <div class="winner-game" style="font-size: 1rem; opacity: 1; font-weight: 700; color: #1a1a1a;">
                         Book of Dead
                     </div>
-                    <div style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.2rem;">
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.3rem; color: #2d2d2d; font-weight: 600;">
                         📍 Barranquilla
                     </div>
                 </div>
             </div>
-            <p style="margin-top: 1.2rem; font-size: 0.85rem; opacity: 0.7; font-style: italic;">
+            <p style="margin-top: 1.3rem; font-size: 0.88rem; opacity: 0.85; font-style: italic; color: #3d3d3d;">
                 *Premios registrados en plataformas recomendadas durante los últimos 7 días
             </p>
             <a href="https://www.jue999.co/m/home?affiliateCode=seoc101" 
@@ -691,6 +718,33 @@
         .chat-button:hover { transform:scale(1.1); }
         .chat-window.active { display:block !important; }
         .chat-option-btn:hover { background:#4a2020; }
+    
+        /* 大獎榜手機版優化 */
+        @media (max-width: 768px) {
+            .winners-section h3 {
+                font-size: 1.3rem !important;
+                line-height: 1.4 !important;
+            }
+            .winners-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.8rem !important;
+            }
+            .winner-card {
+                padding: 0.8rem !important;
+            }
+            .winner-amount {
+                font-size: 1.5rem !important;
+            }
+            .winner-game {
+                font-size: 0.85rem !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .winners-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    
     </style>
     </div>
 
