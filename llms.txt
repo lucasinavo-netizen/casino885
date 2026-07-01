@@ -1,23 +1,28 @@
 # casino885.casino
 
-> CASINO885 - Mejores Casinos Online Colombia 2026
+> Casino885 Cambodia Guide 2026
 
-Comparativa casinos online Colombia. JUE999 vs Betsson vs Wplay: RTP 96.8%, retiros 24h. Bonos exclusivos.
+Independent adult casino guide for Cambodia, covering online slots, live casino, mobile account checks, USD/KHR bankroll tracking, withdrawal review points and responsible play.
 
 ## Pages
 
-- [CASINO885 - Mejores Casinos Online Colombia 2026](https://casino885.casino/): Comparativa casinos online Colombia. JUE999 vs Betsson vs Wplay: RTP 96.8%, retiros 24h. Bonos exclusivos.
+- [Casino Cambodia Guide 2026](https://casino885.casino/): Cambodia-focused casino guide for adults, replacing the previous broad casino comparison page.
 
 ## Topics
 
-This site provides information and comparisons related to online gaming and betting platforms in Colombia.
+- Online casino Cambodia
+- Slot games Cambodia
+- Live casino Cambodia
+- Mobile casino safety
+- Sports betting account checks
+- Withdrawal and bankroll review
 
 ## Content Language
 
-- Primary: es-CO
+- Primary: en-KH
 
 ## Crawler Guidelines
 
-- This site's content is original and may be cited with attribution.
-- Please respect our robots.txt for crawl budgets.
-- For commercial use of our content, contact the site owner.
+- The public page may be cited with attribution.
+- The `/go/` and `/api/` paths are affiliate redirect or system paths and should not be crawled.
+- The site is informational and does not provide legal advice.
