@@ -1,4 +1,4 @@
-const DEFAULT_DESTINATION = "https://www.rr95k.com/?ch=0cf28df51e";
+const DEFAULT_DESTINATION = "https://www.myan99.me/m/home?affiliateCode=seom202";
 
 module.exports = function handler(req, res) {
   const destination = process.env.CAMBODIA_AFFILIATE_URL || DEFAULT_DESTINATION;
