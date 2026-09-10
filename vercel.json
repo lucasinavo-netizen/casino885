@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/go/:path*",
-      "destination": "/api/go"
-    },
-    {
       "source": "/go/vn",
       "destination": "/api/go-vn"
+    },
+    {
+      "source": "/go/:path*",
+      "destination": "/api/go"
     }
   ]
 }
